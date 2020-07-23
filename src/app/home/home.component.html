@@ -1,0 +1,51 @@
+<div class="container">
+
+
+  <div class="row">
+
+      <div class="col-md-12">
+          <div class="panel panel-default" *ngFor="let post of posts">
+              <div class="panel-heading">
+                  {{post.title}} - <small>by {{post.user?.name}}</small>
+
+                  <span class="pull-right">
+                      Thu, Jan 10, 2019 7:50 AM
+                  </span>
+              </div>
+
+              <div class="panel-body">
+                  <p>{{post.body}}</p>
+                  <p>
+                      Tags:
+                      <span  class="label label-danger" *ngFor="let tag of post.tags">{{tag.name}}</span>
+                  </p>
+                  <p>
+                      <span class="btn btn-sm btn-success">{{post.category?.name}}</span>
+                      <span routerLink="/post/{{post._id}}" class="btn btn-sm btn-info">Comments <span class="badge"></span></span>
+
+                      <a routerLink="/post/{{post._id}}" class="btn btn-sm btn-primary">See more</a>
+                  </p>
+              </div>
+          </div>
+
+
+          <div align="center">
+              <ul class="pagination">
+
+                  <li class="disabled"><span>« Previous</span></li>
+
+
+                  <li><a href="" rel="next">Next »</a></li>
+              </ul>
+
+          </div>
+
+      </div>
+
+
+
+  </div>
+
+
+
+</div>
