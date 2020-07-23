@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  basedURL : "http://localhost:3000/"
+  basedURL : "https://blogapiyasmeen.herokuapp.com/"
 };
 
 /*
